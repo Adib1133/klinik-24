@@ -1,0 +1,45 @@
+.partners {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.partners h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.partnerCard {
+  background-color: var(--light-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.partnerCard h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.partnerCard p {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .partnerGrid {
+    grid-template-columns: 1fr;
+  }
+}

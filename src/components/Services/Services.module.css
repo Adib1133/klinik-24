@@ -1,0 +1,173 @@
+.services {
+  padding: 4rem 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e293b;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.serviceCard {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.iconWrapper svg {
+  width: 48px;
+  height: 48px;
+}
+
+.serviceCard:nth-child(1) .iconWrapper {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.serviceCard:nth-child(2) .iconWrapper {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.serviceCard:nth-child(3) .iconWrapper {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.serviceCard h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.serviceCard p {
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.reservasiButton {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 140px;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.reservasiButton:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.reservasiButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
+}
+
+.reservasiButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 3rem 0;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .serviceGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .serviceCard {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .iconWrapper svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.3rem;
+  }
+  
+  .serviceCard p {
+    font-size: 0.9rem;
+  }
+  
+  .reservasiButton {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceCard {
+    margin: 0 0.5rem;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+}

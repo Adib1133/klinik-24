@@ -1,0 +1,345 @@
+.hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+}
+
+.textContent {
+  padding-right: 2rem;
+}
+
+.textContent h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.highlight {
+  color: #4f46e5;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.ctaButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.imageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.decorativeElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sunBurst {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, transparent 30%, #4f46e5 31%, #4f46e5 32%, transparent 33%);
+  border-radius: 50%;
+}
+
+.sunBurst::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: repeating-conic-gradient(from 0deg, transparent 0deg, transparent 15deg, #4f46e5 16deg, #4f46e5 18deg);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dots {
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  width: 6px;
+  height: 120px;
+  background: linear-gradient(to bottom, 
+    #4f46e5 0px, #4f46e5 6px, transparent 6px, transparent 12px,
+    #4f46e5 12px, #4f46e5 18px, transparent 18px, transparent 24px,
+    #4f46e5 24px, #4f46e5 30px, transparent 30px, transparent 36px,
+    #4f46e5 36px, #4f46e5 42px, transparent 42px, transparent 48px,
+    #4f46e5 48px, #4f46e5 54px, transparent 54px, transparent 60px
+  );
+  background-size: 6px 60px;
+  background-repeat: repeat-y;
+}
+
+.curvedLines {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+}
+
+.curvedLines::before,
+.curvedLines::after {
+  content: '';
+  position: absolute;
+  border: 3px solid #4f46e5;
+  border-radius: 50%;
+  border-top: transparent;
+  border-left: transparent;
+}
+
+.curvedLines::before {
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 0;
+}
+
+.curvedLines::after {
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-top: 3px solid #4f46e5;
+  border-left: 3px solid #4f46e5;
+}
+
+.pillIcon {
+  position: absolute;
+  bottom: 25%;
+  right: 35%;
+  width: 40px;
+  height: 40px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillIcon::before {
+  content: '+';
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.doctorCircle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+  z-index: 2;
+}
+
+.doctorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.doctorCard {
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+  min-width: 220px;
+}
+
+.cardIcon {
+  width: 50px;
+  height: 50px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardContent h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.cardContent p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    gap: 2rem;
+  }
+  
+  .textContent h1 {
+    font-size: 2.8rem;
+  }
+  
+  .imageSection {
+    height: 500px;
+  }
+  
+  .doctorCircle {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .textContent {
+    padding-right: 0;
+  }
+  
+  .textContent h1 {
+    font-size: 2.2rem;
+  }
+  
+  .textContent p {
+    max-width: 100%;
+  }
+  
+  .imageSection {
+    height: 400px;
+  }
+  
+  .doctorCircle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .doctorCard {
+    position: static;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  
+  .decorativeElements {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContent h1 {
+    font-size: 1.8rem;
+  }
+  
+  .textContent p {
+    font-size: 1rem;
+  }
+  
+  .ctaButton {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .doctorCircle {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .doctorCard {
+    padding: 1rem;
+    min-width: 180px;
+  }
+  
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cardContent h3 {
+    font-size: 1rem;
+  }
+  
+  .cardContent p {
+    font-size: 0.8rem;
+  }
+}
